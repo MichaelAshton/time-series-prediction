@@ -1,0 +1,7 @@
+numpy==1.16.2
+pandas==0.24.2
+dash==0.39.0
+dash-daq==0.1.0
+xlrd==1.2.0
+scipy==1.2.1
+dash-auth==1.2.0
