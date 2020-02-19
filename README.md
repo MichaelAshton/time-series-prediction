@@ -31,16 +31,16 @@ You can now import the package:
 The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run as defined in EurekaRegression.py. (Tested on colab)
 Alternatively, one can use `demo.py`
 
-The following variables should be exported in a bash environment prior to running the code
-export API_KEY="" (comet-ml api-key)
-export REST_API_KEY=""(comet-ml REST api-key)
-export workspace="" (comet-ml workspace name)
-export db_username="" (postgres username)
-export db_password="" (postgres password)
-export db_ip="" (postgres host/ip)
-export db_database="" (postgres database)
-export scrappy_username="" (betting website username)
-export scrappy_password="" (betting website password)
+The following variables should be exported in a bash environment prior to running the code:  
+export API_KEY=""           # comet-ml api-key
+export REST_API_KEY=""      # comet-ml REST api-key  
+export workspace=""         # comet-ml workspace name
+export db_username=""       # postgres username  
+export db_password=""       # postgres password  
+export db_ip=""             # postgres host/ip  
+export db_database=""       # postgres database  
+export scrappy_username=""  # betting website username  
+export scrappy_password=""  # betting website password  
 
 ### TO DO
 - Test on windows/ubuntu
