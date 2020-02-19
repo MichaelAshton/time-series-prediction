@@ -18,9 +18,6 @@ The python package is named eureka254 and is split into the following scripts:
 5. TrainingHarness.py - contains the abstracted training functions
 6. Evaluation.py - contains methods for profit evaluation and the more common metrics such as rmse etc
 
-The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run. (Tested on colab)
-Alternatively, one can use `demo.py`
-
 ### Install (tested on colab)
 
 #### Replace `master` with your preferred installable git branch
@@ -30,7 +27,9 @@ You can now import the package:
 
 `import eureka254`
 
-The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run. (Tested on colab)
+### How to Run
+The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run as defined in EurekaRegression.py. (Tested on colab)
+Alternatively, one can use `demo.py`
 
 ### TO DO
 - Test on windows/ubuntu
