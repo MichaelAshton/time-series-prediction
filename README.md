@@ -1,7 +1,7 @@
 # time-series-prediction
 
 ### Description
-This project is an attempt at developing a generic package for frequent time series modelling applications e.g. soil moisture prediction, stock prediction, footbal predicion. The first application supported is virtual football modelling. Virtual football is a simulation of football games where a match is 2 minute long. People then place bets on teams of their choice. The algorithm that runs the game is supposedly random but the house doesn't leave winnings to chance. Thus this application is an attempt at modelling the time series representing match results over time.
+This project is an attempt at developing a generic package for frequent time series modelling applications e.g. soil moisture prediction, stock prediction, footbal predicion. The first application supported is virtual football modelling. Virtual football is a simulation of football games where a match is 2 minute long. People then place bets on teams of their choice. The algorithm that runs the game is supposedly random but the house doesn't leave winnings to chance. Thus this application is an attempt at modelling the time series representing match results over time. It scraps the training data from the betting website and loads it into a Postgresql database, trains and evaluates a number of time series models, then makes live predictions and calculates profitability.
 
 The project is structured as a python package. It should work for other time series applications as well. There are a number of components:
 
