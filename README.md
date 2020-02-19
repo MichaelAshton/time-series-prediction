@@ -19,7 +19,7 @@ The python package is named eureka254 and is split into the following scripts:
 6. Evaluation.py - contains methods for profit evaluation and the more common metrics such as rmse etc
 
 The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run. (Tested on colab)
-
+Alternatively, one can use `demo.py`
 
 ### Install (tested on colab)
 
