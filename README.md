@@ -31,6 +31,8 @@ You can now import the package:
 The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run as defined in EurekaRegression.py. (Tested on colab)
 Alternatively, one can use `demo.py`
 
+The dashboard can be ran in 
+
 The following variables should be exported in a bash environment prior to running the code:  
 export API_KEY=""           # comet-ml api-key  
 export REST_API_KEY=""      # comet-ml REST api-key    
@@ -41,6 +43,17 @@ export db_ip=""             # postgres host/ip
 export db_database=""       # postgres database    
 export scrappy_username=""  # betting website username    
 export scrappy_password=""  # betting website password    
+
+### Technologies used
+1. selenium - for web scraping
+2. postgres - database
+3. psycopg2 and sqlalchemy - python database adapters for db interaction
+3. pandas - for data cleaning and analysis
+4. gluonts - for probabilistic time series modelling
+5. comet-ml - for logging experiments and bayesian optimization
+6. slackclient - for sending slack notifications and monitoring of live model
+
+
 
 ### TO DO
 - Test on windows/ubuntu
