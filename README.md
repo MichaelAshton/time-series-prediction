@@ -31,7 +31,10 @@ You can now import the package:
 The `demo_run.ipynb` notebook contains a demo of running a training and evaluation run as defined in EurekaRegression.py. (Tested on colab)
 Alternatively, one can use `demo.py`
 
-The dashboard can be ran in 
+The dashboard can be ran with the following steps
+1. `cd dashboard`
+2. `pip install -r requirements.txt`
+3. `python app.py`
 
 The following variables should be exported in a bash environment prior to running the code:  
 export API_KEY=""           # comet-ml api-key  
