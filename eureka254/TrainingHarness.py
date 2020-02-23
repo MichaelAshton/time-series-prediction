@@ -781,9 +781,9 @@ class TrainingHarness:
           experiment.end()    
 
         # initialize comet REST API to retrieve the best hyperparameters
-        comet_api = comet_ml.API(api_key=api_key, rest_api_key=rest_api_key)
+        comet_api = comet_ml.API(rest_api_key=rest_api_key)
       
-        project = comet_api.get(workspace=workspace, project=optimizer.experiment_kwargs['project_name'].lower())
+        project = comet_api.get(workspace=workspace, project_name=optimizer.experiment_kwargs['project_name'].lower())
         
         scores_df = pd.DataFrame(index=project.data['experiments'].keys(), columns=['metric'])
         # loop through the experiments within the comet project

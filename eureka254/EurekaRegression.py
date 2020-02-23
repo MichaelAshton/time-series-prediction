@@ -65,7 +65,7 @@ class EurekaRegression:
         ):
         if type_of_time_series == "teams":
             initializer = TrainingHarness()
-            teams_df,train_ds, test_ds = initializer.preprocess_by_team(x_y_data)
+            teams_df,train_ds, test_ds = initializer.preprocess_by_teams(x_y_data)
             
         elif type_of_time_series == "position":
             initializer = TrainingHarness()

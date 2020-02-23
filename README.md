@@ -36,16 +36,16 @@ The dashboard can be ran with the following steps
 2. `pip install -r requirements.txt`
 3. `python app.py`
 
-The following variables should be exported in a bash environment prior to running the code:  
-export API_KEY=""           # comet-ml api-key  
-export REST_API_KEY=""      # comet-ml REST api-key    
-export workspace=""         # comet-ml workspace name  
-export db_username=""       # postgres username     
-export db_password=""       # postgres password    
-export db_ip=""             # postgres host/ip    
-export db_database=""       # postgres database    
-export scrappy_username=""  # betting website username    
-export scrappy_password=""  # betting website password    
+The following variables should be populated in `demo.ipynb` or `demo.py` :  
+API_KEY=""           # comet-ml api-key  
+REST_API_KEY=""      # comet-ml REST api-key    
+workspace=""         # comet-ml workspace name  
+db_username=""       # postgres username     
+db_password=""       # postgres password    
+db_ip=""             # postgres host/ip    
+db_database=""       # postgres database    
+scrappy_username=""  # betting website username    
+scrappy_password=""  # betting website password    
 
 ### Technologies used
 1. selenium - for web scraping

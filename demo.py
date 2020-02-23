@@ -1,11 +1,26 @@
 ### Eureka package usage
 
 import comet_ml
+import os
 
 # set comet ml API and REST API Keys here
 API_KEY = ""
 REST_API_KEY = "" 
 workspace= ""
+
+db_username = ""
+db_password = ""
+db_ip = ""
+db_database = ""
+scrappy_username=""
+scrappy_password=""
+
+os.environ["db_username"]=db_username
+os.environ["db_password"]=db_password
+os.environ["db_ip"]=db_ip
+os.environ["db_database"]=db_database
+os.environ["scrappy_username"]=scrappy_username
+os.environ["scrappy_password"]=scrappy_password
 
 from eureka254.TrainingHarness import TrainingHarness
 import os
@@ -50,7 +65,7 @@ df.rename(columns={'total_goals': 'goals'}, inplace=True)
 teams_df, train_ds, test_ds = TrainingHarness.preprocess_by_position(df)
 
 # preprocess by team (all 20 teams)
-teams_df, train_ds, test_ds = TrainingHarness.preprocess_by_team(df)
+teams_df, train_ds, test_ds = TrainingHarness.preprocess_by_teams(df)
 
 # train the models
 experiment = EurekaRegression.fit(x_y_data=df, training_pred_score_path=training_pred_score_path, type_of_time_series='teams', cv_flag=False, api_key=API_KEY, rest_api_key=REST_API_KEY, param_search='bayes', workspace=workspace)
