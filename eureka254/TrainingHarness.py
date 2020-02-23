@@ -784,14 +784,17 @@ class TrainingHarness:
         comet_api = comet_ml.API(rest_api_key=rest_api_key)
       
         project = comet_api.get(workspace=workspace, project_name=optimizer.experiment_kwargs['project_name'].lower())
+
+        # get the experiment ids
+        exp_ids = [x.id for x in project]
         
-        scores_df = pd.DataFrame(index=project.data['experiments'].keys(), columns=['metric'])
+        scores_df = pd.DataFrame(index=exp_ids, columns=['metric'])
         # loop through the experiments within the comet project
-        for exp_id in project.data['experiments'].keys():
+        for exp_id in exp_ids:
             
             exp = comet_api.get(f"{workspace}/{project_name.lower()}/{exp_id}")
             
-            scores_df.at[exp_id, 'metric'] = exp.metrics_raw[0]['metricValue']
+            scores_df.at[exp_id, 'metric'] = exp.get_metrics()[0]['metricValue']
             
         scores_df.metric = scores_df.metric.map(float)
         # get experiment_id of the best score
@@ -799,7 +802,7 @@ class TrainingHarness:
         # get the best experiment
         exp = comet_api.get(f"{workspace}/{project_name.lower()}/{best_exp_id}")
         # get the best hyperparameters
-        best_params = {x['name']: x['valueCurrent'] for x in exp.parameters if x['name'] != 'f'}
+        best_params = {x['name']: x['valueCurrent'] for x in exp.get_parameters_summary() if x['name'] != 'f'}
         # save best params in model_name-keyed dictionary for later use
         self.best_params[model_name] = best_params
 
