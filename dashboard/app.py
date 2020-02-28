@@ -133,7 +133,7 @@ def generate_league_table(league_no, week_no):
 
     try:
 
-=      draws = (team_df_temp.winner == 'D').sum()
+      draws = (team_df_temp.winner == 'D').sum()
       table.at[team, 'D'] = draws
 
     except:
