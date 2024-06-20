@@ -11,7 +11,7 @@ requirements = [
       'xlrd==1.2.0',
       'PyYAML==5.4',
       'scikit-learn==1.5.0',
-      'configobj==5.0.6',
+      'configobj>=5.0.7',
       'pytz==2019.2',
       'comet-ml'
       ]
