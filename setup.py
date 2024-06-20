@@ -5,7 +5,7 @@ requirements = [
       'selenium==3.141.0',
       'slackclient==1.3.1',
       'sqlalchemy==1.3.5',
-      'mxnet==1.4.1',
+      'mxnet==1.9.1',
       'gluonts==0.3.0',
       'numpy==1.22.0',
       'xlrd==1.2.0',
