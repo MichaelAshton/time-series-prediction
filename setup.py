@@ -10,7 +10,7 @@ requirements = [
       'numpy==1.14.6',
       'xlrd==1.2.0',
       'PyYAML==5.4',
-      'scikit-learn==0.21.2',
+      'scikit-learn==1.5.0',
       'configobj==5.0.6',
       'pytz==2019.2',
       'comet-ml'
