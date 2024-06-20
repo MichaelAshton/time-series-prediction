@@ -7,7 +7,7 @@ requirements = [
       'sqlalchemy==1.3.5',
       'mxnet==1.4.1',
       'gluonts==0.3.0',
-      'numpy==1.14.6',
+      'numpy==1.22.0',
       'xlrd==1.2.0',
       'PyYAML==5.4',
       'scikit-learn==0.21.2',
